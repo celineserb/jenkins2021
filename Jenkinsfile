@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         powershell 'build.gradle'
+        powershell 'gradle doc'
       }
     }
 
