@@ -5,6 +5,7 @@ pipeline {
       steps {
         powershell 'build.gradle'
         powershell 'gradle doc'
+        junit 'Results'
       }
     }
 
