@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        powershell 'gradle build'
+        bat 'gradle build'
       }
     }
 
