@@ -5,7 +5,12 @@ pipeline {
       steps {
         powershell 'build.gradle'
         powershell 'gradle doc'
-        junit 'Results'
+      }
+    }
+
+    stage('Mail Notification') {
+      steps {
+        mail(subject: 'Succes', body: 'build avec succés', cc: 'hc_serbouh@esi.dz', bcc: 'hc_serbouh@esi.dz')
       }
     }
 
