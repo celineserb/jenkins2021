@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        bat 'C://Users//esdi-pc//Desktop//SIL//OUTILS//Gradle//gradle-5.6//gradle build'
+        withGradle() {
+          powershell 'gradle build'
+        }
+
       }
     }
 
